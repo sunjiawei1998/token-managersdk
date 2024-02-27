@@ -1,0 +1,80 @@
+{
+  "name": "idg-token-manager",
+  "version": "0.0.36",
+  "scripts": {
+    "serve": "idg-webpack serve --process",
+    "build": "idg-webpack build --target=app",
+    "pack": "idg-webpack build --target=service",
+    "commit": "git add . && git-cz",
+    "changelog": "node ./scripts/changelog.js"
+  },
+  "module": "es/index.js",
+  "dependencies": {
+    "@idg/crowed": "0.0.56",
+    "@idg/voting": "0.1.17",
+    "bn.js": "^5.2.0"
+  },
+  "main": "dist/main.common.js",
+  "typings": "types",
+  "files": [
+    "es",
+    "types",
+    "/build",
+    "/contracts"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@ethersproject/bignumber": "^5.4.1",
+    "@idg/fastclick": "^0.1.1",
+    "@idg/finance": "0.0.16",
+    "@idg/gui-debugger": "0.1.0",
+    "@idg/gui-layout": "0.1.1",
+    "@idg/gui-navigator": "0.4.0",
+    "@idg/gui-table": "0.1.6",
+    "@idg/idg": "2.12.27",
+    "@idg/issuing": "^0.1.21",
+    "@idg/iview": "4.7.41",
+    "@idg/os": "0.0.16",
+    "@idg/reboant-nft-js-sdk": "^0.1.4",
+    "@idg/vault": "0.0.10",
+    "@idg/volunteered": "0.1.10",
+    "@idg/webpack": "^0.0.113",
+    "@sentry/tracing": "^6.2.0",
+    "@sentry/vue": "^6.2.5",
+    "Validator": "^1.1.4",
+    "axios": "^0.19.0",
+    "babel-core": "7.0.0-bridge.0",
+    "chalk": "^3.0.0",
+    "commitizen": "^4.1.2",
+    "conventional-changelog": "^3.1.21",
+    "cz-customizable": "^6.2.0",
+    "husky": "^4.2.5",
+    "localforage": "^1.9.0",
+    "lodash": "^4.17.15",
+    "nyc": "^14.1.1",
+    "register-service-worker": "^1.6.2",
+    "svg-loader": "^0.0.2",
+    "tempfile": "^3.0.0",
+    "typescript-tslint-plugin": "^0.5.5",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0",
+    "vue-i18n": "^8.12.0",
+    "vue-property-decorator": "^8.2.1",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.1",
+    "web3": "^1.5.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "MIT"
+}
